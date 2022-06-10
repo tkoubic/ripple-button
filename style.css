@@ -1,0 +1,41 @@
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: hsl(255 50% 5%);
+}
+
+.btn-ripple{
+    cursor: pointer;
+    border: 3px solid currentColor;
+    color: rgb(105, 93, 209);
+    background-color: transparent;
+    padding: 2rem 4rem;
+    appearance: none; 
+    font-size:4rem;
+    
+}
+
+.btn-ripple::before {
+    position: absolute;
+    content: '';
+}
+
+.btn-ripple:hover{
+   animation: scaleUp 1.3s linear infinite;
+}
+
+@keyframes scaleUp{
+    0% {
+        font-size: 4rem;
+        transform: scale(1);
+    }
+    50% {
+        font-size: 4.5rem;
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+
+}
