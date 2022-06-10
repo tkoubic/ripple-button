@@ -1,10 +1,26 @@
 body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: grid;
-    place-items: center;
+    place-items: center;    
     min-height: 100vh;
     background-color: hsl(255 50% 5%);
 }
+.container{
+    width: 100%;
+    max-height: 80vh;
+    text-align: center;    
+    color: white;
 
+    
+}
+.title{
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+}
+h1{
+    text-decoration: underline;
+
+}
 .btn-ripple{
     display: inline-grid;
     position: relative;
