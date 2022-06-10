@@ -6,22 +6,56 @@ body {
 }
 
 .btn-ripple{
+    display: inline-grid;
+    position: relative;
+    place-items: center;
+    isolation: isolate;
     cursor: pointer;
     border: 3px solid currentColor;
-    color: rgb(105, 93, 209);
+    color: rgb(109, 234, 51);
     background-color: transparent;
     padding: 2rem 4rem;
     appearance: none; 
     font-size:4rem;
-    
+    overflow: hidden;
 }
-
-.btn-ripple::before {
-    position: absolute;
-    content: '';
-}
-
 .btn-ripple:hover{
+    transform: scale(1.02);
+}
+.btn-ripple::before {
+    display: block;
+    width: 180%;
+    position: absolute;
+    top:var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 600ms;
+    content: '';
+    background: rgb(238, 255, 0);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+
+
+.pulsing::before{
+    animation: pulsing 500ms;
+}
+@keyframes pulsing {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0;
+    }
+  }
+  
+
+/* .btn-ripple:hover{
    animation: scaleUp 1.3s linear infinite;
 }
 
@@ -38,4 +72,4 @@ body {
         transform: scale(1);
     }
 
-}
+} */
