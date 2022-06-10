@@ -31,14 +31,12 @@ body {
     transform: translate(-50%, -50%) scale(0);
     transition: transform 600ms;
     content: '';
-    background: rgb(238, 255, 0);
+    background: rgb(255, 255, 255);
     aspect-ratio: 1/1;
     border-radius: 50%;
     opacity: 0.8;
     z-index: -1;
 }
-
-
 
 .pulsing::before{
     animation: pulsing 500ms;
